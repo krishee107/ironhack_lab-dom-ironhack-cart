@@ -54,6 +54,8 @@ function createProduct() {
   let nuevoProducto = document.querySelector('.product').cloneNode('true');
   nuevoProducto.querySelector('.name span').innerHTML = productName;
   nuevoProducto.querySelector('.price span').innerHTML = productPrice;
+  nuevoProducto.querySelector('.subtotal span').innerHTML = 0;
+  nuevoProducto.querySelector('.btn-remove').addEventListener('click', removeProduct);
   document.querySelector('tbody').appendChild(nuevoProducto)
 
 }
